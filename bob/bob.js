@@ -6,11 +6,14 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-  if (input.search(/[a-z]/) === -1 && input.search(/[A-Z]/) > -1) {
+  if (input.search(/[a-z\xe4\xfc]/) === -1 && input.search(/[A-Z]/) > -1) {
     return 'Whoa, chill out!';
   }
   if (input.slice(-1) === '?') {
-    return 'Sure.'
+    return 'Sure.';
+  }
+  if (input.trim() === '') {
+    return 'Fine. Be that way!';
   }
   return 'Whatever.';
 };

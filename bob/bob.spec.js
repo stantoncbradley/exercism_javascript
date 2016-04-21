@@ -70,27 +70,27 @@ describe('Bob', function() {
     expect(result).toEqual('Whatever.');
   });
 
-  xit('shouting with no exclamation mark', function () {
+  it('shouting with no exclamation mark', function () {
     var result = bob.hey('I HATE YOU');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xit('statement containing question mark', function() {
+  it('statement containing question mark', function() {
     var result = bob.hey('Ending with a ? means a question.');
     expect(result).toEqual('Whatever.');
   });
 
-  xit('prattling on', function () {
+  it('prattling on', function () {
     var result = bob.hey('Wait! Hang on.  Are you going to be OK?');
     expect(result).toEqual('Sure.');
   });
 
-  xit('silence', function () {
+  it('silence', function () {
     var result = bob.hey('');
     expect(result).toEqual('Fine. Be that way!');
   });
 
-   xit('prolonged silence', function () {
+   it('prolonged silence', function () {
     var result = bob.hey('   ');
     expect(result).toEqual('Fine. Be that way!');
   });
